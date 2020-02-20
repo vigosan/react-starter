@@ -1,0 +1,10 @@
+node_modules
+build
+logs
+tmp
+
+.env
+.DS_Store
+*.log*
+*.swp
+*.orig
