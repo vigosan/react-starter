@@ -11,10 +11,10 @@
     "validate": "npm run check:format && npm run lint"
   },
   "dependencies": {
-    "@reach/router": "^1.3.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
