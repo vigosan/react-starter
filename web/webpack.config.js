@@ -12,7 +12,7 @@ const htmlWebpackPlugin = new HtmlWebpackPlugin({
 let config = {
   mode: isProd ? 'production' : 'development',
   entry: {
-    index: './src/index.js',
+    index: './src/index.tsx',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -20,13 +20,13 @@ let config = {
     publicPath: '/',
   },
   resolve: {
-    extensions: ['.js'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
     modules: ['src', 'node_modules'],
   },
   module: {
     rules: [
       {
-        test: /\.js?$/,
+        test: /\.tsx?$/,
         use: 'babel-loader',
         exclude: /node_modules/,
       },

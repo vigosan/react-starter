@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "esModuleInterop": true,
+    "noEmit": true,
+    "strict": true,
+    "jsx": "preserve"
+  }
+}
