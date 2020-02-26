@@ -6,7 +6,7 @@
     "check:types": "tsc",
     "format": "npm run prettier -- --write",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src",
-    "prettier": "prettier \"**/*.+(js|css|scss|ts|tsx|md|graphql)\"",
+    "prettier": "prettier \"**/*.+(js|json|css|scss|ts|tsx|md|graphql)\"",
     "start": "serve dist",
     "start:dev": "cross-env NODE_ENV=development webpack-dev-server --color",
     "validate": "npm run check:types && npm run check:format && npm run lint"
@@ -35,6 +35,8 @@
     "eslint-plugin-react": "^7.18.3",
     "file-loader": "^5.1.0",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
     "mini-css-extract-plugin": "^0.9.0",
     "postcss-loader": "^3.0.0",
     "prettier": "^1.19.1",
