@@ -21,7 +21,7 @@ let config = {
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
-    modules: ['src', 'node_modules'],
+    modules: ['node_modules', path.join(__dirname, 'src')],
   },
   module: {
     rules: [
