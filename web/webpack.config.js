@@ -26,7 +26,7 @@ let config = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.(js|tsx)$/,
         use: 'babel-loader',
         exclude: /node_modules/,
       },
