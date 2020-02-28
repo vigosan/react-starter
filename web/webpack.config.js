@@ -6,7 +6,7 @@ const isProd = process.env.NODE_ENV === 'production';
 const apiUrl = 'http://api:9000';
 
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
-  template: './src/index.html',
+  template: './public/index.html',
 });
 
 let config = {
