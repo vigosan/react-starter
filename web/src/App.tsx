@@ -2,9 +2,10 @@ import React from 'react';
 
 import './App.css';
 
-type AppProps = { app: string };
-const App = ({ app }: AppProps) => (
-  <div data-testid="message">{`Hello ${app}!`}</div>
+type AppProps = { name: string };
+
+const App = ({ name }: AppProps) => (
+  <div data-testid="message">{`Hello ${name}!`}</div>
 );
 
 export default App;

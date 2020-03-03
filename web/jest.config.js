@@ -11,7 +11,10 @@ module.exports = {
     '\\.module\\.css$': 'identity-obj-proxy',
     '\\.css$': require.resolve('./test/style-mock.js'),
   },
-  setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
+  setupFilesAfterEnv: [
+    '@testing-library/jest-dom/extend-expect',
+    'jest-axe/extend-expect',
+  ],
   collectCoverageFrom: ['**/src/**/*.js'],
   watchPlugins: [
     'jest-watch-typeahead/filename',
