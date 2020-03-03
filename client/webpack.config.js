@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const isProd = process.env.NODE_ENV === 'production';
-const apiUrl = 'http://api:9000';
+const serverUrl = 'http://server:9000';
 
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
   template: './public/index.html',
@@ -73,9 +73,9 @@ if (isProd) {
         stats: 'errors-only',
         overlay: true,
         proxy: {
-          '/api': {
-            target: apiUrl,
-            pathRewrite: { '^/api': '' },
+          '/server': {
+            target: serverUrl,
+            pathRewrite: { '^/server': '' },
           },
         },
       },
