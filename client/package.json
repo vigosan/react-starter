@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "client",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --color",
     "check:format": "npm run prettier -- --list-different",

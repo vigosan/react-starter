@@ -1,6 +1,6 @@
 FROM node:alpine
 
-ENV APP /web
+ENV APP /client
 WORKDIR $APP
 
 COPY package.json package-lock.json ./

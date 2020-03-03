@@ -1,5 +1,5 @@
 import React from 'react';
-import { axe, toHaveNoViolations } from 'jest-axe';
+import { axe } from 'jest-axe';
 import { render } from '@testing-library/react';
 import App from '../App';
 
