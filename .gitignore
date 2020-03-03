@@ -2,6 +2,8 @@ node_modules
 build
 logs
 tmp
+dist
+coverage
 
 .env
 .DS_Store
