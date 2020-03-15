@@ -1,0 +1,5 @@
+{
+  "baseUrl": "http://client:8080",
+  "testFiles": "**/*_test.js",
+  "video": false
+}

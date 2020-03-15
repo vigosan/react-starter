@@ -3,7 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const isProd = process.env.NODE_ENV === 'production';
-const serverUrl = 'http://server:9000';
+var settings = {
+  host: process.env.HOST || '0.0.0.0',
+  port: process.env.PORT || 8080,
+  serverUrl: 'http://server:9000',
+};
 
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
   template: './public/index.html',
@@ -64,17 +68,16 @@ if (isProd) {
   config = {
     ...{
       devServer: {
-        host: '0.0.0.0',
-        port: 8080,
-        historyApiFallback: true,
         compress: true,
-        open: true,
+        disableHostCheck: true,
+        historyApiFallback: true,
+        host: settings.host,
         hot: true,
-        stats: 'errors-only',
         overlay: true,
+        port: settings.port,
         proxy: {
           '/server': {
-            target: serverUrl,
+            target: settings.serverUrl,
             pathRewrite: { '^/server': '' },
           },
         },

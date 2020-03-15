@@ -11,12 +11,23 @@ services:
 
   client:
     build: ./client
+    depends_on:
+      - server
     command: ["npm", "run", "start:dev"]
     volumes:
       - ./client:/client
       - client_nm:/client/node_modules
     ports:
       - 8080:8080
+
+  e2e:
+    image: "cypress/included:4.1.0"
+    depends_on:
+      - server
+      - client
+    working_dir: /e2e
+    volumes:
+      - ./e2e:/e2e
 
 volumes:
   server_nm:
