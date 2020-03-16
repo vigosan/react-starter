@@ -4,6 +4,8 @@ logs
 tmp
 dist
 coverage
+videos
+screenshots
 
 .env
 .DS_Store
