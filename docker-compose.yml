@@ -21,9 +21,8 @@ services:
       - 8080:8080
 
   e2e:
-    image: "cypress/included:4.1.0"
+    build: ./e2e
     depends_on:
-      - server
       - client
     working_dir: /e2e
     volumes:
