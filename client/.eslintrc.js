@@ -14,6 +14,7 @@ module.exports = {
   rules: {
     strict: ['error', 'never'],
   },
+  plugins: ['react-hooks'],
   env: {
     es6: true,
     browser: true,
