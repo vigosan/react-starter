@@ -2,10 +2,10 @@ version: "3.7"
 services:
   server:
     build: ./server
-    command: ["npm", "run", "start"]
     volumes:
       - ./server:/server
-      - server_nm:/server/node_modules
+      - /server/node_modules
+    command: ["npm", "run", "start"]
     ports:
       - 9000:9000
 
@@ -13,10 +13,10 @@ services:
     build: ./client
     depends_on:
       - server
-    command: ["npm", "run", "start:dev"]
     volumes:
       - ./client:/client
-      - client_nm:/client/node_modules
+      - /client/node_modules
+    command: ["npm", "run", "start:dev"]
     ports:
       - 8080:8080
 
@@ -24,12 +24,7 @@ services:
     build: ./e2e
     depends_on:
       - client
-    working_dir: /e2e
     volumes:
       - ./e2e:/e2e
-
-volumes:
-  server_nm:
-    driver: local
-  client_nm:
-    driver: local
+      - /e2e/node_modules
+    command: ["npm", "run", "test"]
