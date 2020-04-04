@@ -13,6 +13,8 @@ module.exports = {
   ],
   rules: {
     strict: ['error', 'never'],
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
   },
   plugins: ['react-hooks'],
   env: {
