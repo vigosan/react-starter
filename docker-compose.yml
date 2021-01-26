@@ -1,18 +1,16 @@
 version: "3.7"
 services:
-  server:
-    build: ./server
-    volumes:
-      - ./server:/server
-      - /server/node_modules
-    command: ["npm", "run", "start"]
-    ports:
-      - 9000:9000
+  #server:
+  #  build: ./server
+  #  volumes:
+  #    - ./server:/server
+  #    - /server/node_modules
+  #  command: ["npm", "run", "start"]
+  #  ports:
+  #    - 9000:9000
 
   client:
     build: ./client
-    depends_on:
-      - server
     volumes:
       - ./client:/client
       - /client/node_modules

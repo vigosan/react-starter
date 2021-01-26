@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:alpine
 
 ENV APP /client
 WORKDIR $APP
