@@ -16,7 +16,7 @@ e2e:
 	docker-compose run --rm e2e
 
 console:
-	docker-compose run --rm $(filter-out $@, $(MAKECMDGOALS)) /bin/sh
+	docker-compose run --rm $(filter-out $@, $(MAKECMDGOALS)) /bin/bash
 
 logs:
 	docker-compose logs -f $(filter-out $@, $(MAKECMDGOALS))

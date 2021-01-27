@@ -1,6 +1,6 @@
 FROM node:latest
 
-ENV APP /client
+ENV APP /server
 WORKDIR $APP
 
 COPY package.json package-lock.json ./
